@@ -1,0 +1,26 @@
+accounts:
+  - id int auto_increment PK
+  - name varchar(255)
+
+stocks:
+  - ticker varchar(4) PK
+  - last_price int
+  - previous_price int
+  - open_price int
+  - volume int
+  - frequency int
+  - turnover bigint
+
+portfolio:
+  - account_id FK
+  - ticker FK
+  - lot int
+  - average_price float
+
+history:
+  account_id FK
+  ticker FK
+  lot int
+  type varchar(4)
+  order_time datetime
+  order_matched_time datetime
